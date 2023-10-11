@@ -1,12 +1,11 @@
-import { Inject } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredients.model';
 import { Subject } from 'rxjs';
 
-@Inject({
-  providerIn: 'root',
-})
 export class ShoppingListService {
-  constructor() {}
+  constructor() {
+    console.log("Shopping list initialized")
+  }
   //ingredientChanges = new EventEmitter<Ingredient[]>();
   startedEditing = new Subject<number>();
   ingredientChanges = new Subject<Ingredient[]>();
